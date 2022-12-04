@@ -27,11 +27,11 @@ export const meta: MetaFunction = ({ location }) => {
     title: "JSON Viewer - JSON Hero",
     viewport: "width=device-width,initial-scale=1",
     description,
-    "og:image": `https://jsonhero.io${openGraphImage}`,
-    "og:url": `https://jsonhero.io${location.pathname}`,
+    // "og:image": `https://jsonhero.io${openGraphImage}`,
+    // "og:url": `https://jsonhero.io${location.pathname}`,
     "og:title": "JSON Hero - A beautiful JSON viewer",
     "og:description": description,
-    "twitter:image": `https://jsonhero.io${openGraphImage}`,
+    // "twitter:image": `https://jsonhero.io${openGraphImage}`,
     "twitter:card": "summary_large_image",
     "twitter:creator": "@json_hero",
     "twitter:site": "@json_hero",
@@ -44,7 +44,7 @@ import styles from "./tailwind.css";
 import { getThemeSession } from "./theme.server";
 import { getStarCount } from "./services/github.server";
 import { StarCountProvider } from "./components/StarCountProvider";
-import {PreferencesProvider} from '~/components/PreferencesProvider'
+import { PreferencesProvider } from "~/components/PreferencesProvider";
 
 export function links() {
   return [{ rel: "stylesheet", href: styles }];
