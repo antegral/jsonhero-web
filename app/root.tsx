@@ -33,7 +33,7 @@ export const meta: MetaFunction = ({ location }) => {
     "og:url": `https://example.com/${location.pathname}`,
     "og:title": "JSON Hero - A beautiful JSON viewer",
     "og:description": description,
-    "twitter:image": `https://${window.location.hostname}/$${openGraphImage}`,
+    "twitter:image": `https://example.com/$${openGraphImage}`,
     "twitter:card": "summary_large_image",
     "twitter:title": "JSON Hero",
     "twitter:description": description,
