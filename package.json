@@ -28,7 +28,6 @@
     "lint": "npm run build:types"
   },
   "dependencies": {
-    "@apihero/fetch": "^0.1.0",
     "@codemirror/lang-json": "^0.19.1",
     "@codemirror/rangeset": "^0.19.6",
     "@heroicons/react": "^1.0.5",
@@ -51,7 +50,6 @@
     "clsx": "^1.1.1",
     "color": "^4.2.1",
     "downshift": "^6.1.7",
-    "fathom-client": "^3.4.1",
     "framer-motion": "^6.2.4",
     "json-source-map": "^0.6.1",
     "jwt-decode": "^3.1.2",
