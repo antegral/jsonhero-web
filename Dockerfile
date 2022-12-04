@@ -3,10 +3,19 @@ FROM node:16.17.0 as builder
 WORKDIR /src
 COPY . /src
 
+# Build Argument
+ARG SESSION_SECRET="h7kvD36CD7xo6B*6tbVT50GEXjWITUR_xgUff4@AKPYO"
+ARG PEEKALINK_API_KEY=""
+
+# Env
+ENV SESSION_SECRET=$SESSION_SECRET
+ENV PEEKALINK_API_KEY=$PEEKALINK_API_KEY
+
 # App
 RUN cd /src
 RUN npm install
-RUN echo "SESSION_SECRET=abc123" > .env
+RUN echo "SESSION_SECRET=${SESSION_SECRET}" >> .env
+RUN echo "PEEKALINK_API_KEY=${PEEKALINK_API_KEY}" >> .env
 RUN npm run build
 
 CMD npm start
