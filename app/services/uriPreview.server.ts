@@ -4,7 +4,6 @@ import {
   PreviewResult,
 } from "~/components/Preview/Types/preview.types";
 import safeFetch from "~/utilities/safeFetch";
-import { fetchProxy } from "./apihero.server";
 
 const imageContentTypes = [
   "image/jpeg",
@@ -19,7 +18,7 @@ async function getPeekalink(link: string): Promise<PreviewResult> {
     return { error: "Preview unavailable" };
   }
 
-  const response = await fetchProxy("https://api.peekalink.io/", {
+  const response = await fetch("https://api.peekalink.io/", {
     method: "POST",
     headers: {
       "X-API-Key": PEEKALINK_API_KEY,
