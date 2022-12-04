@@ -23,15 +23,17 @@ import openGraphImage from "~/assets/images/opengraph.png";
 export const meta: MetaFunction = ({ location }) => {
   const description =
     "JSON Hero makes reading and understand JSON files easy by giving you a clean and beautiful UI packed with extra features.";
+
+  // TODO: Read hostname and insert it into og metadata
   return {
     title: "JSON Viewer - JSON Hero",
     viewport: "width=device-width,initial-scale=1",
     description,
-    "og:image": `https://${LISTEN_DOMAIN}/${openGraphImage}`,
-    "og:url": `https://${LISTEN_DOMAIN}/${location.pathname}`,
+    "og:image": `https://example.com/${openGraphImage}`,
+    "og:url": `https://example.com/${location.pathname}`,
     "og:title": "JSON Hero - A beautiful JSON viewer",
     "og:description": description,
-    "twitter:image": `https://${LISTEN_DOMAIN}/$${openGraphImage}`,
+    "twitter:image": `https://${window.location.hostname}/$${openGraphImage}`,
     "twitter:card": "summary_large_image",
     "twitter:title": "JSON Hero",
     "twitter:description": description,
